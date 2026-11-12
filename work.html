@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Work · Federica Parolisi</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+:root{--paper:#FAFAF8;--ink:#1D1D1A;--ink-soft:#5B5B53;--lime:#D8F600;--line:#E2E2DE;--violet:#7200B8;
+  --f-display:"Archivo","Arial Narrow","Helvetica Neue",sans-serif;--f-body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;--f-mono:"DM Mono",ui-monospace,Menlo,monospace;
+  --gutter:clamp(16px,4vw,56px);--ease:cubic-bezier(.34,1.56,.64,1);color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+button{-webkit-appearance:none;appearance:none;color:var(--ink)}
+::selection{background:var(--lime)}
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+.wrap{padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px));max-width:1440px;margin:0 auto}
+.label{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.display{font-family:var(--f-display);font-stretch:68%;font-variation-settings:"wdth" 68;font-weight:800;text-transform:uppercase;line-height:.88}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark svg{height:34px;width:auto;transform-origin:left center;transition:transform .5s var(--ease)}
+.mark:hover svg{transform:scaleX(1.32) scaleY(.86)}
+.mark span{font-family:var(--f-display);font-stretch:75%;font-variation-settings:"wdth" 75;font-weight:700;font-size:17px;text-transform:uppercase;padding-left:12px;border-left:1px solid var(--line);line-height:1.1;transition:transform .5s var(--ease)}
+.mark:hover span{transform:translateX(30px)}
+.nav-r{display:flex;align-items:center;gap:clamp(14px,2.4vw,28px)}
+.links{display:flex;gap:clamp(14px,2.4vw,28px);list-style:none;margin:0;padding:0;font-size:15px}
+.links a{text-decoration:none;padding:4px 0;border-bottom:1.5px solid transparent}
+.links a:hover{border-color:var(--ink)}
+.links a[aria-current="page"]{border-color:var(--lime);border-bottom-width:3px}
+.copy{font:inherit;font-size:15px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:8px 16px;cursor:pointer;white-space:nowrap}
+.copy:hover{background:var(--lime);color:var(--ink)}
+footer{background:var(--ink);color:#fff}
+footer .wrap{padding-block:clamp(48px,6vw,88px) 28px}
+.f-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+.f-top h2{font-family:var(--f-display);font-stretch:70%;font-variation-settings:"wdth" 70;font-weight:800;font-size:clamp(40px,6vw,96px);text-transform:uppercase;line-height:.9;margin:0}
+.f-top h2 span{color:var(--lime)}
+.f-top p{margin:14px 0 0;color:#A9A89E;font-size:clamp(16px,1.4vw,20px)}
+.f-links{display:flex;flex-direction:column;gap:8px;font-size:16px}
+.f-links a{text-decoration:none;border-bottom:1px solid #55554d;padding-bottom:4px}
+.f-links a:hover{color:var(--lime);border-color:var(--lime)}
+.f-mail{font-family:var(--f-mono);user-select:all}
+.f-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:clamp(48px,6vw,88px);padding-top:20px;border-top:1px solid #3A3A35;font-family:var(--f-mono);font-size:12px;color:#9d9c92}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--lime);color:var(--ink);font-weight:600;padding:10px 18px;border-radius:999px;opacity:0;transition:.25s;z-index:30}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.ico{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;background:#fff;flex:none;transition:background .25s,border-color .25s,transform .4s var(--ease)}
+.ico svg{width:22px;height:22px}
+.pill{display:inline-flex;align-items:center;font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:#fff;white-space:nowrap}
+.pill.lime{background:var(--lime);border-color:var(--lime)}
+.tcover .tlogo{width:min(58%,440px);height:auto;transition:transform .7s cubic-bezier(.34,1.56,.64,1)}
+.card:hover .tcover .tlogo,.c-band:hover .tlogo{transform:scale(1.05)}
+.tcover{position:absolute;inset:0;background:var(--bg);display:grid;place-items:center;overflow:hidden}
+.tcover .tw{font-family:var(--f-display);font-stretch:62%;font-variation-settings:"wdth" 62;font-weight:900;text-transform:uppercase;color:#1D1D1A;font-size:clamp(48px,7.4vw,124px);line-height:.8;letter-spacing:-.005em;transition:font-variation-settings .7s cubic-bezier(.34,1.56,.64,1)}
+.tchips{position:absolute;left:14px;right:14px;bottom:14px;display:flex;flex-wrap:wrap;gap:6px}
+.tchips .pill{display:inline-flex;font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;background:#fff;color:#1D1D1A;border:0;border-radius:999px;padding:4px 10px}
+.reveal{transition:transform .9s var(--ease)}
+.vp .vl{display:inline-block;transform-origin:50% 88%;will-change:transform}
+.vp .w{display:inline-block;white-space:nowrap}
+.reveal.pre{transform:translateY(28px)}
+@media (max-width:640px){.links{display:none}.mark span{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal.pre{transform:none}}
+
+.w-hero .wrap{padding-block:clamp(40px,6vw,88px) clamp(24px,3vw,40px)}
+.w-hero h1{font-size:clamp(64px,12vw,200px);margin:14px 0 18px}
+.w-hero h1 sup{font-family:var(--f-mono);font-size:.14em;font-weight:400;vertical-align:top;margin-left:.15em;letter-spacing:0}
+.w-hero p{max-width:50ch;margin:0;font-size:clamp(17px,1.4vw,20px);color:var(--ink-soft)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-top:28px}
+.filters button{color:var(--ink);font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;transition:background .2s,border-color .2s}
+.filters button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.filters button:hover{border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(14px,1.6vw,22px);padding-block:clamp(20px,3vw,40px) clamp(64px,8vw,120px)}
+.card{grid-column:span 2;display:flex;flex-direction:column;gap:12px;text-decoration:none;transition:opacity .3s}
+.card.big{grid-column:span 3}
+.card[hidden]{display:none}
+.thumb{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#fff;border:1px solid var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform .7s var(--ease)}
+.card:hover .thumb img{transform:scale(1.05)}
+.card:hover .tcover .tw{font-variation-settings:"wdth" 84}
+.thumb:has(.tcover){border:0}
+.thumb .ph-l{position:absolute;inset:0;background:var(--lime);display:grid;place-items:center}
+.thumb .ph-l span{font-size:clamp(48px,6vw,96px);transition:font-variation-settings .6s var(--ease)}
+.card:hover .thumb .ph-l span{font-variation-settings:"wdth" 92}
+.thumb .go{position:absolute;right:12px;top:12px;transform:scale(.6);opacity:0;transition:transform .4s var(--ease),opacity .2s}
+.card:hover .thumb .go{transform:scale(1);opacity:1}
+.thumb .go .ico{background:var(--lime);border-color:var(--lime)}
+.c-meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.card h3{font-family:var(--f-display);font-stretch:82%;font-variation-settings:"wdth" 82;font-weight:700;font-size:clamp(22px,2vw,30px);line-height:1.05;margin:0}
+.card p{margin:0;font-size:15px;color:var(--ink-soft);max-width:48ch}
+.card .tags{display:flex;gap:6px;flex-wrap:wrap}
+.card.nolink{cursor:default}
+.more{border-top:1px solid var(--line);margin-top:4px}
+.more summary{list-style:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:10px 0;font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.more summary::-webkit-details-marker{display:none}
+.more .plus{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:16px;transition:transform .4s var(--ease),background .2s}
+.more[open] .plus{transform:rotate(45deg);background:var(--lime);border-color:var(--lime)}
+.more summary:hover .plus{background:var(--lime);border-color:var(--lime)}
+.more-in{display:grid;gap:14px;padding:6px 0 10px}
+.more-in>div{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px 12px}
+.more-in .ico{grid-row:span 2}
+.more-in .label{color:var(--ink);align-self:end}
+.more-in p{margin:0;font-size:14px}
+.sep-row{grid-column:1/-1;display:flex;align-items:center;gap:14px;margin-top:clamp(24px,3vw,40px)}
+.sep-row::after{content:"";order:1;flex:1;height:1px;background:var(--line)}
+.arc-toggle{order:2;color:var(--ink);font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;display:inline-flex;gap:8px}
+.arc-toggle:hover,.arc-toggle[aria-expanded="true"]{background:var(--lime);border-color:var(--lime)}
+.grid:not(.arc-open) .card[data-cat="uni"]{display:none}
+@media (max-width:900px){.card,.card.big{grid-column:span 3}}
+@media (max-width:600px){.card,.card.big{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="mark" href="./" aria-label="Federica Parolisi, home"><svg viewBox="16 77 285 189" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M83.74,86.92c-3.14.63-5.75,4.28-5.99,8.31-3.04,50.23-6.14,100.45-9.32,150.67-.24,3.82,2.21,7.73,5.34,8.45,2.71.62,5-1.48,5.33-4.86.23-2.39.35-3.59.58-5.99.37-3.79,2.93-6.28,5.97-5.82,1.16.18,1.74.26,2.89.43,3,.44,5.55,3.68,5.98,7.66.25,2.39.38,3.59.63,5.98.42,3.99,2.97,7.35,5.99,7.81,1.67.25,2.5.38,4.17.61,3.57.51,6.38-3.3,6.04-8.14-3.72-53.58-7.48-107.16-11.31-160.74-.29-4.08-2.9-6.83-6.02-6.29-4.11.71-6.17,1.09-10.27,1.91ZM87.55,186.83c-1.66-.06-2.97-1.94-2.83-4.08.79-12.02,1.58-24.04,2.36-36.06.02-.37.27-.68.55-.69.29-.02.53.26.55.63.74,12.09,1.47,24.19,2.2,36.28.13,2.16-1.18,3.97-2.83,3.91Z"/><path d="M18.59,233.22c0,2.21,1.73,4.69,3.86,5.5,2.27.87,3.41,1.3,5.69,2.13,2.15.78,3.89-.53,3.89-2.91,0-29.88,0-59.77,0-89.65,1.49,26.67,2.95,53.34,4.4,80.01.13,2.35,1.84,4.66,3.91,5.23,1.45.4,2.17.6,3.62.98,2.06.55,3.77-.88,3.92-3.26,1.83-28.4,3.63-56.81,5.4-85.22,0,32.77,0,65.53,0,98.3,0,2.61,1.77,5.23,3.96,5.84,1.52.42,2.28.63,3.81,1.03,2.19.58,3.97-1.17,3.97-3.89,0-50.35,0-100.7,0-151.05,0-2.72-1.78-4.47-3.97-3.89-3.93,1.04-5.89,1.59-9.8,2.73-2.06.6-3.77,2.98-3.93,5.43-.5,7.55-.74,11.3-1.24,18.77-.38,5.71-7.42,7.12-7.82,1.77-.52-7.01-.79-10.5-1.31-17.43-.17-2.23-1.86-3.42-3.89-2.71-4.26,1.49-6.39,2.26-10.61,3.88-2.14.82-3.86,3.29-3.86,5.5,0,40.96,0,81.92,0,122.89Z"/><path fill-rule="evenodd" d="M135.89,87.88c.25-4.37,2.9-7.89,6.08-8.03,1.56-.07,2.33-.1,3.89-.15,3.15-.11,5.78,3.15,6.08,7.48,2.54,36.47,5.08,72.94,7.62,109.41.33,4.67-2.33,8.72-5.73,8.71-2.86-.01-5.29-2.94-5.7-6.85-.04-.36-.06-.54-.09-.9-.39-3.7-2.68-6.46-5.39-6.48-2.75-.02-5.06,2.76-5.4,6.5-.11,1.17-.16,1.75-.26,2.92-.24,2.62-1.86,4.55-3.78,4.51-2.22-.05-3.97-2.7-3.79-5.72,2.17-37.13,4.32-74.26,6.47-111.39ZM140.98,150.6c-.1,1.61.82,2.99,2,2.98,1.17,0,2.09-1.39,2-3-.62-10.58-.93-15.87-1.55-26.43-.02-.28-.19-.5-.39-.49-.2,0-.37.22-.39.5-.67,10.58-1,15.87-1.66,26.44Z"/><path d="M120.29,81.41c-2.77.28-5.02,3.58-5.02,7.33,0,54.83,0,109.66,0,164.49,0,4.54,2.72,8.54,6.08,8.87,11.53.95,22.85,1.55,34.42,1.82,3.37.02,6.11-3.78,6.11-8.45,0-10.73,0-21.46,0-32.19,0-4.66-2.74-8.43-6.11-8.44-9.75-.03-14.63-.12-24.36-.45-3.37-.11-6.09-3.95-6.09-8.54,0-39.35,0-78.69,0-118.04,0-3.79-2.25-6.67-5.03-6.39Z"/><path d="M171.62,263.7c-3.37.12-6.12-3.62-6.12-8.28,0-55.81,0-111.62,0-167.44,0-4.66,2.73-8.4,6.11-8.28,14.08.69,27.93,1.94,41.9,3.76,3.35.49,6.05,4.51,6.05,8.93v31.84c0,4.42-2.71,7.79-6.05,7.57-9.87-.67-19.78-1.14-29.67-1.42-3.37-.1-6.1,3.6-6.1,8.24v14.91c0,4.64,2.73,8.42,6.1,8.44.92,0,1.37,0,2.29.02,3.37.03,6.09,3.77,6.09,8.36v17.16c0,4.59-2.73,8.38-6.09,8.44-.92.02-1.37.03-2.29.04-3.37.06-6.1,3.86-6.1,8.5,0,16.85,0,33.69,0,50.54,0,4.64-2.75,8.55-6.12,8.66Z"/><path d="M202.88,141.1c4.17.17,6.25.26,10.41.47,3.35.17,6.06,3.9,6.06,8.32v17.7c0,4.42-2.71,8.02-6.06,8.04-.95,0-1.43,0-2.38.02-2.82.02-5.11,3.11-5.11,6.92s2.29,6.83,5.11,6.75c.06,0,.09,0,.14,0,2.9-.08,5.25,2.97,5.25,6.81v11.09c0,3.85-2.35,7.14-5.25,7.34-.53.04-.79.05-1.32.09-2.17.14-3.93,2.62-3.93,5.55,0,2.93,1.76,5.17,3.93,4.99,1.42-.12,2.14-.18,3.56-.3,3.35-.29,6.06,3.02,6.06,7.44,0,7.49,0,11.24,0,18.73,0,4.42-2.71,8.44-6.06,8.93-4.16.6-6.24.88-10.41,1.37-3.36.39-6.08-3.04-6.08-7.61,0-34.86,0-69.72,0-104.58,0-4.57,2.72-8.18,6.08-8.04Z"/><path d="M292.79,103.95c-8.29-3.13-12.47-4.56-20.88-7.19-3.26-1.02-5.91,1.35-5.91,5.24v139.42c0,3.88,2.65,6.25,5.91,5.24,8.42-2.63,12.6-4.07,20.88-7.19,3.21-1.21,5.8-4.93,5.8-8.24v-26.84c0-3.31-2.59-5.58-5.8-5.09-3.21.49-4.82.73-8.06,1.19-3.12.45-5.66-2.09-5.66-5.64s2.54-6.62,5.66-6.87c1.47-.12,2.2-.18,3.67-.3,3.22-.27,5.82-3.25,5.82-6.65v-16.24c0-3.4-2.6-6.35-5.82-6.58-1.39-.1-2.08-.15-3.47-.24-3.23-.22-5.86-3.37-5.86-7.04v-3.41c0-3.67,2.63-6.28,5.86-5.8,3.15.47,4.72.72,7.86,1.22,3.21.51,5.8-1.73,5.8-5.05v-25.69c0-3.31-2.59-7.03-5.8-8.24Z"/><path fill-rule="evenodd" d="M223.79,93.09c0-4.31,3.14-7.25,4.55-6.99,7.06,1.31,10.58,2.06,17.58,3.7,6.62,1.56,10.63,10.26,12.97,20.06,2.19,9.02,3.14,19.05,2.97,28.34h0v76.36c.12,10.15-1.17,20.95-5.93,30.07-3.32,6.11-7.32,8.71-10,9.1,0,0,0,0,0,0-7.23,1.7-10.86,2.47-18.14,3.81-1.41.26-4-2.78-4-7.09,0-52.46,0-104.92,0-157.37ZM240.55,209.95c-1.41.14-2.55-3.13-2.55-7.3v-51.81c0-4.17,1.14-7.48,2.55-7.37,1.27.09,1.9.14,3.16.24,1.67.13,2.7,3.17,3.31,7.05.62,3.89.81,8.54.78,11.65h0v32.32c0,6.12-.7,9.82-1.54,12-.85,2.21-1.87,2.93-2.55,2.9,0,0,0,0,0,0-1.27.13-1.9.2-3.17.33Z"/></svg><span>Federica Parolisi</span></a>
+  <div class="nav-r">
+    <ul class="links"><li><a href="work.html" aria-current="page">Work</a></li><li><a href="./#about">About</a></li><li><a href="./#malafede">Malafede</a></li></ul>
+    <button class="copy" type="button" data-copy="federicaparolisi97@gmail.com">Copy email</button>
+  </div>
+</div></header>
+<main>
+  <section class="w-hero"><div class="wrap">
+    <span class="label">Selected and archive</span>
+    <h1 class="display vp">Work<sup>(10)</sup></h1>
+    <p>Products I've designed, client projects and the university work that got me here. The first four have full case studies; my university work is in the archive below.</p>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="product" aria-pressed="false">Own product</button>
+      <button type="button" data-f="client" aria-pressed="false">Client</button>
+      <button type="button" data-f="uni" aria-pressed="false">University</button>
+    </div>
+  </div></section>
+  <section class="wrap grid"><a class="card big reveal" data-cat="product" href="gamindo.html"><div class="thumb"><div class="tcover " style="--bg:#F1EDE7"><img class="tlogo" src="img/gamindo-wordmark.svg" alt="Gamindo"></div><span class="go"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></div><div class="c-meta"><h3>Gamindo Builder</h3><span class="label">2025 – now</span></div><p>From consultancy to product: personas, onboarding, productization and a system the team reuses.</p><div class="tags"><span class="pill">Product</span><span class="pill">B2B SaaS</span></div></a><a class="card big reveal" data-cat="client" href="trenord.html"><div class="thumb"><img src="img/cov/trenord.jpg" alt="" loading="lazy"><span class="go"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></div><div class="c-meta"><h3>Trenord</h3><span class="label">2021 – 25</span></div><p>Four years on the website and app of Lombardy's rail operator, from research to features like Phone Pass.</p><div class="tags"><span class="pill">Client</span><span class="pill">Web & app</span></div></a><a class="card reveal" data-cat="product" href="mia-platform.html"><div class="thumb"><img src="img/cov/mia.jpg" alt="" loading="lazy"><span class="go"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></div><div class="c-meta"><h3>Mia-Platform</h3><span class="label">2021 – 25</span></div><p>The Console for developers: research, a new navigation, the design system and training for designers.</p><div class="tags"><span class="pill">Product</span><span class="pill">Dev tools</span></div></a><a class="card reveal" data-cat="client" href="quicklypro.html"><div class="thumb"><img src="img/cov/quickly.jpg" alt="" loading="lazy"><span class="go"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></div><div class="c-meta"><h3>QuicklyPro</h3><span class="label">2023</span></div><p>App and platform for a tele-rehabilitation startup, with a wearable for gait rehab.</p><div class="tags"><span class="pill">Client</span><span class="pill">Healthcare</span></div></a><div class="sep-row"><span class="label">Archive · University projects, Politecnico di Milano 2017 – 2022</span><button type="button" class="arc-toggle" aria-expanded="false">Show 6 projects <span aria-hidden="true">+</span></button></div><div class="card nolink reveal" data-cat="uni"><div class="thumb"><img src="img/arc/ripple.jpg" alt="" loading="lazy"></div><div class="c-meta"><h3>Free the Ripple</h3><span class="label">2020 – 21</span></div><p>A third option between concerts and streaming, for an independent hip hop label.</p><div class="tags"><span class="pill">Service design</span></div><details class="more"><summary><span>My role · Pains · Takeaways</span><span class="plus" aria-hidden="true">+</span></summary><div class="more-in"><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></span><span class="label">My role</span><p>I took part in every stage: deadlines, team coordination and presentations. I ran the interviews and the co-design sessions, created the service visuals and details, and designed the app's wireframes and final UI.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6L13 3z"/></svg></span><span class="label">Pains</span><p>A hard-to-reach partner and our first co-design sessions, all online. Innovating in live shows, a field that had barely changed, took a careful look at what the audience really needed.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span><span class="label">Takeaways</span><p>I learned to design a service in detail within economic constraints, grew my relational skills and learned how to run a co-design session.</p></div></div></details></div><div class="card nolink reveal" data-cat="uni"><div class="thumb"><img src="img/arc/gls.jpg" alt="" loading="lazy"></div><div class="c-meta"><h3>GLS redesign</h3><span class="label">2020 – 21</span></div><p>A heuristic redesign of the GLS website around three main user tasks.</p><div class="tags"><span class="pill">UX/UI</span></div><details class="more"><summary><span>My role · Pains · Takeaways</span><span class="plus" aria-hidden="true">+</span></summary><div class="more-in"><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></span><span class="label">My role</span><p>I analysed part of the existing website, built one of the personas and part of the presentation, designed the wireframes and UI of the homepage and of the "check delivery times" task, and built the prototype.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6L13 3z"/></svg></span><span class="label">Pains</span><p>Our first redesign of an existing website. Testing wasn't required, so we didn't test the prototype, and I missed knowing whether usability really improved.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span><span class="label">Takeaways</span><p>What to consider when redesigning a live website, and how to apply usability heuristics in practice.</p></div></div></details></div><div class="card nolink reveal" data-cat="uni"><div class="thumb"><img src="img/arc/ciclope.jpg" alt="" loading="lazy"></div><div class="c-meta"><h3>Ciclope</h3><span class="label">2019 – 20</span></div><p>Finding the right information inside a company, fast.</p><div class="tags"><span class="pill">Service design</span><span class="pill">UX/UI</span></div><details class="more"><summary><span>My role · Pains · Takeaways</span><span class="plus" aria-hidden="true">+</span></summary><div class="more-in"><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></span><span class="label">My role</span><p>I ran some of the interviews, turned insights into pain points, mapped the user journeys, defined Ciclope's details, ran the user tests and made the whole video.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6L13 3z"/></svg></span><span class="label">Pains</span><p>Because of COVID-19 the project was entirely online. Finding inspiration to generate ideas remotely was the hardest phase.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span><span class="label">Takeaways</span><p>Working with ProntoPro showed me how a real company works. Designing a platform for the first time taught me what UI design really asks for, and I applied the MEDGI methodology for the first time.</p></div></div></details></div><div class="card nolink reveal" data-cat="uni"><div class="thumb"><img src="img/arc/lova.jpg" alt="" loading="lazy"></div><div class="c-meta"><h3>Lova</h3><span class="label">2019 – 20</span></div><p>Cleans stains on clothes with one touch and no water, using photocatalysis.</p><div class="tags"><span class="pill">Product design</span></div><details class="more"><summary><span>My role · Pains · Takeaways</span><span class="plus" aria-hidden="true">+</span></summary><div class="more-in"><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></span><span class="label">My role</span><p>Part of every phase, from research to the end: presentations, visuals, renders, branding, booklets, the service definition, the UI and the video.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6L13 3z"/></svg></span><span class="label">Pains</span><p>Communication inside a multicultural team was hard at first. Team building and getting to know each other made it work.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span><span class="label">Takeaways</span><p>Framing a scenario, setting goals and discovering user needs, and learning to listen and mediate in a multicultural team.</p></div></div></details></div><div class="card nolink reveal" data-cat="uni"><div class="thumb"><img src="img/arc/algrow.jpg" alt="" loading="lazy"></div><div class="c-meta"><h3>Algrow</h3><span class="label">2018 – 19</span></div><p>A spirulina dispenser for cities that captures CO₂ and grows food.</p><div class="tags"><span class="pill">Product design</span></div><details class="more"><summary><span>My role · Pains · Takeaways</span><span class="plus" aria-hidden="true">+</span></summary><div class="more-in"><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></span><span class="label">My role</span><p>An individual project with a real partner, from research to engineering and the development of the service.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6L13 3z"/></svg></span><span class="label">Pains</span><p>Facing a whole project alone, and finding a valid scope in such a complex, distant scenario. Talking often with the partner and the teachers got me through.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span><span class="label">Takeaways</span><p>Managing a real client, carrying a project alone from start to engineering and meeting deadlines: it's where I became an independent designer.</p></div></div></details></div><div class="card nolink reveal" data-cat="uni"><div class="thumb"><img src="img/arc/drop.jpg" alt="" loading="lazy"></div><div class="c-meta"><h3>Drop</h3><span class="label">2017 – 18</span></div><p>A steam cleaner for glass and windows, with two accessories.</p><div class="tags"><span class="pill">Product design</span></div><details class="more"><summary><span>My role · Pains · Takeaways</span><span class="plus" aria-hidden="true">+</span></summary><div class="more-in"><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></span><span class="label">My role</span><p>Market research, presentation design, mockups and 3D modelling.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6L13 3z"/></svg></span><span class="label">Pains</span><p>Finding a shape that met every technical requirement in very little space. We kept iterating until it worked from every point of view.</p></div><div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span><span class="label">Takeaways</span><p>Technical skills for product development, like materials and assembly, and how to define the target, the goals and users' hidden needs.</p></div></div></details></div></section>
+</main>
+<footer><div class="wrap">
+  <div class="f-top">
+    <div><h2>Bring me something<br><span>tangled.</span></h2><p>I untangle yarn for fun and products for a living.</p></div>
+    <div class="f-links"><span class="f-mail">federicaparolisi97@gmail.com</span><a href="https://linkedin.com/in/federica-parolisi-2869231a1" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://www.instagram.com/made.with.malafede/" target="_blank" rel="noopener">Instagram ↗</a></div>
+  </div>
+  <div class="f-bottom"><span>© 2026 Federica Parolisi</span><span>Hand-coded, hand-crocheted</span></div>
+</div></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script>
+
+// Always open a page at the top (unless a #section was asked for)
+try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+(function () {
+  var toTop = function () { if (!location.hash) window.scrollTo(0, 0); else { var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); } };
+  toTop(); window.addEventListener('load', toTop); window.addEventListener('pageshow', toTop);
+})();
+(() => {
+  const toast = document.querySelector('.toast'); let t;
+  const say = m => { toast.textContent = m; toast.classList.add('on'); clearTimeout(t); t = setTimeout(() => toast.classList.remove('on'), 2200); };
+  document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => {
+    navigator.clipboard.writeText(b.dataset.copy).then(() => say('Email copied')).catch(() => say(b.dataset.copy));
+  }));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    const els = [...document.querySelectorAll('.reveal')];
+    const vh = innerHeight;
+    els.forEach(el => { if (el.getBoundingClientRect().top > vh) el.classList.add('pre'); });
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('pre'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => io.observe(el));
+  }
+
+  // Variable proximity on titles (same as the home hero): letters near the cursor stretch up
+  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  document.querySelectorAll('.vp').forEach(h => {
+    if (!fine || reduce) return;
+    const wrap = node => [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+          const w = document.createElement('span'); w.className = 'w';
+          [...part].forEach(c => { const s = document.createElement('span'); s.className = 'vl'; s.textContent = c; s.setAttribute('aria-hidden', 'true'); w.appendChild(s); });
+          frag.appendChild(w);
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1 && n.tagName !== 'SUP') wrap(n);
+    });
+    h.setAttribute('aria-label', h.textContent); wrap(h);
+    const chars = [...h.querySelectorAll('.vl')]; let base = [], mx = -1e4, my = -1e4, raf = 0;
+    const measure = () => { chars.forEach(c => c.style.transform = ''); const hr = h.getBoundingClientRect();
+      base = chars.map(c => { const b = c.getBoundingClientRect(); return [b.left - hr.left + b.width / 2, b.top - hr.top + b.height / 2]; }); };
+    measure(); addEventListener('resize', measure); document.fonts && document.fonts.ready.then(measure);
+    const frame = () => { raf = 0; const hr = h.getBoundingClientRect();
+      chars.forEach((c, i) => { const t = Math.max(0, 1 - Math.hypot(mx - hr.left - base[i][0], my - hr.top - base[i][1]) / 160);
+        c.style.transform = t > 0 ? `scaleY(${(1 + .28 * t * t).toFixed(3)})` : ''; }); };
+    addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; if (!raf) raf = requestAnimationFrame(frame); });
+  });
+  const bar = document.querySelector('.progress');
+  if (bar) addEventListener('scroll', () => {
+    const h = document.documentElement; bar.style.transform = `scaleX(${h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight)})`;
+  }, { passive: true });
+})();
+
+const grid = document.querySelector('.grid'), tog = document.querySelector('.arc-toggle');
+const setArc = open => { grid.classList.toggle('arc-open', open); tog.setAttribute('aria-expanded', open); tog.firstChild.textContent = open ? 'Hide projects ' : 'Show 6 projects '; tog.lastElementChild.textContent = open ? '−' : '+'; };
+tog.addEventListener('click', () => setArc(!grid.classList.contains('arc-open')));
+document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+  const f = b.dataset.f;
+  document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  document.querySelectorAll('.card').forEach(c => { c.hidden = !(f === 'all' || c.dataset.cat === f); c.classList.remove('pre'); });
+  document.querySelector('.sep-row').hidden = !(f === 'all' || f === 'uni');
+  if (f === 'uni') setArc(true);
+}));
+</script>
+</body>
+</html>
